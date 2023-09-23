@@ -84,9 +84,9 @@ export default {
       margin-top: 25px;
     }
     &.active{
-      color: #1A56BE;
+      color: #ff168a;
       .v-icon{
-        color: #1A56BE;
+        color: #ff168a;
         display: block;
       }
     }
