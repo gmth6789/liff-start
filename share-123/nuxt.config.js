@@ -1,26 +1,24 @@
+import colors from 'vuetify/es5/util/colors'
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Nuxt Starter',
+    titleTemplate: '%s - share-123',
+    title: 'share-123',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: '' },
+      { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href:'https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap'},
-      { rel: 'stylesheet', href:'https://fonts.googleapis.com/icon?family=Material+Icons'}
-    ],
-    script: [
-      { src: 'https://static.line-scdn.net/liff/edge/2.1/sdk.js' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
 
-  loading: { color: '#fff' },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
@@ -34,25 +32,27 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
   ],
+
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-        // Doc: https://axios.nuxtjs.org/usage
-        '@nuxtjs/axios'
-        // Doc: https://github.com/nuxt-community/dotenv-module
-      ],
-      /*
-      ** Axios module configuration
-      ** See https://axios.nuxtjs.org/options
-      */
-axios: {
-      },
+    // https://go.nuxtjs.dev/axios
+    '@nuxtjs/axios',
+  ],
+
+  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  axios: {
+    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
+    baseURL: '/',
+  },
+
+  // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
-    // treeShake: true,    
     theme: {
-      dark: false,
+      dark: true,
       themes: {
         dark: {
           primary: colors.blue.darken2,
