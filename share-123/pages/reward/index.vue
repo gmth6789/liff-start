@@ -54,17 +54,17 @@
 export default {
   mounted(){
     liff.init({
-      liffId: '1654259572-eY7zEd2M'
+      liffId: '2000874237-rbeVgdzK'
     }).then(() => {
       if(liff.isLoggedIn()){
         liff.getProfile().then(profile => {
           this.$store.dispatch('setLine', profile);
-          this.$axios.get(`https://nuxt-tutor.firebaseio.com/members/${this.$store.getters.getLine.userId}/profile.json`).then((res) => {            
+          this.$axios.get(`https://doonungonline-gm-default-rtdb.firebaseio.com/members/${this.$store.getters.getLine.userId}/profile.json`).then((res) => {            
             if(res.data != null){
               this.$store.dispatch('setUser', res.data);
             }
           });
-          this.$axios.get(`https://nuxt-tutor.firebaseio.com/rewards/${this.$store.getters.getLine.userId}.json`).then((res) => {            
+          this.$axios.get(`https://doonungonline-gm-default-rtdb.firebaseio.com/rewards/${this.$store.getters.getLine.userId}.json`).then((res) => {            
             if(res.data != null){
               this.stamps = res.data
             }
@@ -102,7 +102,7 @@ export default {
           }
           return obj;
         })
-        this.$axios.patch(`https://nuxt-tutor.firebaseio.com/rewards/${this.$store.getters.getLine.userId}.json`, {...this.stamps}).then((res) => {            
+        this.$axios.patch(`https://doonungonline-gm-default-rtdb.firebaseio.com/rewards/${this.$store.getters.getLine.userId}.json`, {...this.stamps}).then((res) => {            
 
         }).catch(e => alert(e))
       }).catch(e => alert(e))
