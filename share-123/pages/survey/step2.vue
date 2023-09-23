@@ -48,7 +48,7 @@ export default {
   methods: {
     next(){
       this.$store.dispatch("setSurvey", this.form)
-      this.$axios.patch(`https://nuxt-tutor.firebaseio.com/survey/line:0001.json`, this.form).then((res) => {
+      this.$axios.patch(`https://doonungonline-gm-default-rtdb.firebaseio.com/survey/line:0001.json`, this.form).then((res) => {
         this.$router.push('/survey/step3')
       }).catch(e => console.log(e))
     },
