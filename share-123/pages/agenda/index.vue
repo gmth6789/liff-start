@@ -89,7 +89,7 @@
     font-weight: bold;
     background: #EFEFEF;
     &.v-tab--active{
-      color: #1A56BE !important;      
+      color: #ff168a !important;      
     }    
     &+.v-tab{
       border-left: #BDBDBD solid 1px;
@@ -98,7 +98,7 @@
   .agenda-card{
     color: #4D4D4D;
     .time{
-      color: #1A56BE;
+      color: #ff168a;
       font-weight: bold;
     }
     .agenda-image{
@@ -111,7 +111,7 @@
       margin-top: 15px;
     }
     &.card-set{
-      border-left: 3px solid #1A56BE; 
+      border-left: 3px solid #ff168a; 
       .v-card__text+.v-card__text{
         padding-top: 0 !important;
       }

@@ -6,7 +6,7 @@
       flat
       dark
     >
-      <v-toolbar-title>Register</v-toolbar-title>
+      <v-toolbar-title>สมัครสมาชิก</v-toolbar-title>
     </v-app-bar>
     <v-container class="pt-0 pb-0">
       <v-row>
