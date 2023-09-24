@@ -30,6 +30,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/liff-init.client.js', // add liff.init() plugin
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -74,5 +75,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+
+  env: {
+    LIFF_ID: process.env.LIFF_ID,
+  },
 }
