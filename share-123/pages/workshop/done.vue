@@ -1,7 +1,6 @@
 <template>
-  <div>Done</div>
-<<<<<<< HEAD
+<div>Done</div>
+
 </template>
-=======
-</template>
->>>>>>> d273ecafa96003f478baf48147f66649384442fc
+
+
