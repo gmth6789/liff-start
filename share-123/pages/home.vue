@@ -45,12 +45,27 @@
       >
         เครดิตฟรีสล็อต 30บาท
       </a>
-      <NuxtLink to="/register">
-        สมัครสมาชิก
-      </NuxtLink>
-      <NuxtLink to="/reward">
-        ภารกิจแชร์
-      </NuxtLink>
+    <v-card-actions>
+          <v-spacer />
+          <v-btn
+            color="primary"
+            nuxt
+            to="/register"
+          >
+            สมัครสมาชิก
+          </v-btn>
+        </v-card-actions>
+        
+         <v-card-actions>
+          <v-spacer />
+          <v-btn
+            color="primary"
+            nuxt
+            to="/reward"
+          >
+            ภารกิจแชร์
+          </v-btn>
+        </v-card-actions>
     </div>
   </div>
 </template>
