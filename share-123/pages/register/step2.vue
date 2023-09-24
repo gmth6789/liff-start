@@ -6,7 +6,7 @@
       flat
       dark
     >
-      <v-toolbar-title>Register</v-toolbar-title>
+      <v-toolbar-title>สมัครสมาชิก</v-toolbar-title>
     </v-app-bar>
     <v-container class="pt-0 pb-0">
       <v-row>
@@ -167,7 +167,7 @@ export default {
     register() {
       if(this.validate()){
         this.$store.dispatch('setRegister', this.form)
-        this.$axios.post(`https://doonungonline-gm-default-rtdb.firebaseio.com/members/${this.$store.getters.getLine.userId}/profile.json`, this.$store.getters.getRegister).then((res) => {
+        this.$axios.pacth(`https://doonungonline-gm-default-rtdb.firebaseio.com/members/${this.$store.getters.getLine.userId}/profile.json`, this.$store.getters.getRegister).then((res) => {
           this.$router.push('/register/done')
         }).catch(e => console.log(e))         
       }      

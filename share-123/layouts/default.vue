@@ -25,11 +25,11 @@ export default {
     font-weight: bold;
   }
   .v-application .primary{
-    background-color: #1A56BE !important;
-    border-color: #1A56BE !important;
+    background-color: #ff168a !important;
+    border-color: #ff168a !important;
   }
   .text-primary{
-    color: #1A56BE !important;
+    color: #ff168a !important;
   }
   .bold{
     font-weight: bold;
@@ -52,7 +52,7 @@ export default {
     font-weight: bold;
     min-height: 50px;
     &.outlined{
-      border: 1px solid #1A56BE;
+      border: 1px solid #ff168a;
       border-radius: 28px;
       line-height: normal;
     }

@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-app-bar color="primary" dense flat dark>
-      <v-toolbar-title>Register Workshop</v-toolbar-title>
+      <v-toolbar-title>ภารกิจแชร์หนัง</v-toolbar-title>
     </v-app-bar>
     <v-container class="pt-0 pb-0">
       <v-row>
@@ -100,7 +100,7 @@ export default {
     next() {
       if(this.index == this.workshops.length -1){
         // api save register workshop 
-        this.$axios.patch(`https://doonungonline-gm-default-rtdb.firebaseio.com/workshops/line:0001.json`, { ...this.selectedWorkshop }).then((res) => {
+        this.$axios.pacth(`https://doonungonline-gm-default-rtdb.firebaseio.com/workshops/${this.$store.getters.getLine.userId}.json`, { ...this.selectedWorkshop }).then((res) => {
           this.$router.push('/workshop/done')
         }).catch(e => console.log(e)) 
       }else{

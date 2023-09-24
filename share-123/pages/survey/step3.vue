@@ -60,7 +60,7 @@ export default {
   methods: {
     submit(){
       this.$store.dispatch("setSurvey", this.form)
-      this.$axios.patch(`https://doonungonline-gm-default-rtdb.firebaseio.com/survey/line:0001.json`, this.form).then((res) => {
+      this.$axios.patch(`https://doonungonline-gm-default-rtdb.firebaseio.com/survey/${this.$store.getters.getLine.userId}.json`, this.form).then((res) => {
         this.$router.push('/survey/done')
       }).catch(e => console.log(e))
     },
@@ -84,9 +84,9 @@ export default {
       margin-top: 25px;
     }
     &.active{
-      color: #1A56BE;
+      color: #ff168a;
       .v-icon{
-        color: #1A56BE;
+        color: #ff168a;
         display: block;
       }
     }
