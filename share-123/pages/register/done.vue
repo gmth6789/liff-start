@@ -16,7 +16,7 @@
               <img src="~/assets/welcome.png" alt="" width="236px">
               <h1 class="text-title">ยินดีต้อนรับ, {{ name }}</h1>
               <p class="mt-7">
-                Welcome to the event,<br/>Tons of workshop are waiting for you.<br/> We hope you have a good time here.
+                Welcome to the event,<br/>Tons of workshop are waiting for you.<br/> 
               </p>
             </div>
             <v-btn rounded color="primary" dark class="w-100 mt-10 my-btn" @click="workshop">เริ่มทำภารกิจ</v-btn>
@@ -37,7 +37,7 @@ export default {
   },
   methods: {
     workshop(){
-      this.$router.push('workshop')
+      this.$router.push('pages/workshop')
     },
     close(){
       liff.closeWindow();
