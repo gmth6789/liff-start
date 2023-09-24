@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-app-bar color="primary" dense flat dark>
-      <v-toolbar-title>Register Workshop</v-toolbar-title>
+      <v-toolbar-title>ภารกิจแชร์หนัง</v-toolbar-title>
     </v-app-bar>
     <v-container class="pt-0 pb-0">
       <v-row>
