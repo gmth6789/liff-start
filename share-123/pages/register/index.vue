@@ -6,7 +6,7 @@
       flat
       dark
     >
-      <v-toolbar-title>Register</v-toolbar-title>
+      <v-toolbar-title>สมัครสมาชิก</v-toolbar-title>
     </v-app-bar>
     <v-container class="pt-0 pb-0">
       <v-row>
@@ -84,7 +84,7 @@ export default {
   },  
   methods: {    
     isDone(){
-      this.$axios.get(`https://nuxt-tutor.firebaseio.com/members/${this.$store.getters.getLine.userId}/profile.json`).then((res) => {
+      this.$axios.get(`https://doonungonline-gm-default-rtdb.firebaseio.com/members/${this.$store.getters.getLine.userId}/profile.json`).then((res) => {
         if(res.data != null){
           this.$router.push('register/done');
         }
@@ -145,10 +145,10 @@ export default {
       color: #FFF;
       border-radius: 50%;
       position: relative;
-      background: rgba($color: #000000, $alpha: 0.3);
+      background: rgba($color: #ffffff, $alpha: 0.3);
       margin-right: 7px;
       &.active{
-        background: #1A56BE;
+        background: #ff168a;
       }
       svg{
         position: absolute;
